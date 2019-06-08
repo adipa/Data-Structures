@@ -37,7 +37,7 @@ void calculate(int x)
         else if(n >= 4 && n <= 8)
         {
             d = value(5*i);
-            if(n == 4*i)
+            if(n == 4)
                 printf("%c%c", c, d);
             else
             {

@@ -1,4 +1,4 @@
-void calculate(int x,int v,int m);
+#include<stdio.h>
 char value(int x);
 
 
