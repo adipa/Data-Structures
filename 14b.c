@@ -31,7 +31,7 @@ void calculate(int x)
         {
             while(n != 0){
                 printf("%c", c);
-                n -= i;
+                n -= 1;
             }
         }
         else if(n >= 4 && n <= 8)
