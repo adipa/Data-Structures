@@ -33,7 +33,7 @@ int main()
     // I guess.
     size = maxOccuringChar(str, maxCount); //character with max count
     for (i = 0; i <= size; i++)
-        printf("Max. occuring char: %c\n",maxCount[i]);
+        printf("Max. occuring char: %c\n",(char) maxCount[i]);
     return 0;
 }
 
@@ -42,7 +42,7 @@ int maxOccuringChar(char *str, int maxCount[])
     int i, j, ascii_array[ASCII_LENGTH] = {0};
     for (i = 0; str[i] != '\0'; i++) {
         //count occurrence of each character by its ASCII value
-        ascii_array[str[i]] += 1
+        ascii_array[str[i]] += 1;
     }
 
     for (i = 1, j = 0; i < ASCII_LENGTH; i++) {
