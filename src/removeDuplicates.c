@@ -26,7 +26,7 @@ char *removeDuplicates(char* str, char newStr[])
     int ascii[ASCII_CHAR_LENGTH] = {0}, i, j;
 
     for (i = 0, j = 0; str[i] != '\0'; i++) {
-        // check if this caracter already exists in our string.
+        // check if this character already exists in our string.
         if (ascii[str[i]] == 0 || str[i] == ' ')
         {
             // set character flag to true.
