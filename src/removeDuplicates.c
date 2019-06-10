@@ -3,10 +3,11 @@
 #include<stdio.h>
 #include<string.h>
 
+#include "printUsage.h"
+
 #define ASCII_CHAR_LENGTH 256
 
 char* removeDuplicates(char *str, char newStr[]);
-void printUsage(char *fileName);
 
 int main(int argc, char *argv[])
 {
@@ -36,10 +37,4 @@ char *removeDuplicates(char* str, char newStr[])
         }
     }
     return newStr;
-}
-
-void printUsage(char *fileName)
-{
-    printf("Usage: %s \"<string containing duplicate characters.>\"\n",\
-        fileName);
 }
