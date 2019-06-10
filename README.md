@@ -17,4 +17,7 @@
 
 (19) How do you check if a given String contains valid parentheses?
 
-
+Added .h and .c file with helper function: printUsage
+   To compile code use following commands:
+   $ gcc printUsage.c -c
+   $ gcc [printDuplicates | removeDuplicates].c printUsage.o
