@@ -26,7 +26,7 @@ int areAnagrams(char *str1, char *str2)
         ascii_array[str2[i]] -= 1;
     }
     //0 value at index indicates equal character count in both the strings
-    for(i = 0;i < ASCII_LENGTH; i++) {
+    for(i = 0; i < ASCII_LENGTH; i++) {
         if(ascii_array[i] != 0)
             return 0;
     }
