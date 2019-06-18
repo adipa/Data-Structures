@@ -3,35 +3,22 @@
 
 #define MAX_SIZE 20
 
-void reverseString1(char *str, int len);
-char* reverseString2(char *str, int len);
+char* reverseString(char *str);
 
 int main()
 {
     char str[MAX_SIZE];
-    int len;
     scanf("%[^\n]s", str);
-    len = strlen(str) - 1;
-    reverseString1(str, len);
-    printf("\n%s", reverseString2(str, len));
+    printf("%s", reverseString(str));
 }
 
-void reverseString1(char *str, int len)
+char* reverseString(char *str)
 {
-    int i;
-    for(i = len; i >= 0; i--)
-        printf("%c", str[i]);
-}
-
-char* reverseString2(char *str, int len)
-{
-    int i = 0;
-    while(i < len) {
-        str[i]   = str[i] + str[len];
-        str[len] = str[i] - str[len];
-        str[i] = str[i++] - str[len--];
+    int start = 0, end = strlen(str) - 1;
+    while(start < end) {
+        str[start] = str[start]   + str[end];
+        str[end]   = str[start]   - str[end];
+        str[start] = str[start++] - str[end--];
     }
     return str;
 }
-
-
