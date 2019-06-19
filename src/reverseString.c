@@ -3,26 +3,34 @@
 
 #define MAX_SIZE 20
 
-void reverseString(char *str, int l);
+void reverseString(char *str, int start, int end);
 
 int main()
 {
     char str[MAX_SIZE];
     int len;
+    char c;
+
+    // scan input string. flush newline character from next buffer.
     scanf("%[^\n]s", str);
+    scanf("%c",&c);
+
     //length of string including null
     len = strlen(str);
-    reverseString(str, len);
+    reverseString(str, 0, len - 1);
+    printf("Reverse of string: %s\n",str);
+    return 0;
 }
 
-void reverseString(char *str, int len)
+void reverseString(char *str, int start, int end)
 {
-    char c = str[0];
-    //when length becomes 0 (null character is reached), return
-    if(len == 0)
+    int len = strlen(str);
+    if (len == 0 || len == 1 || start >= end)
         return;
-    //recursively call the function by passing the substring starting from the subsequent character and reducing size by 1
-    reverseString(&str[1], len - 1);
-    //print current character
-    printf("%c", c);
+
+    *(str + start) ^= *(str + end);
+    *(str + end) ^= *(str + start);
+    *(str + start) ^= *(str + end);
+
+    reverseString(str, start + 1, end - 1);
 }
