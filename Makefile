@@ -2,17 +2,24 @@ CC=gcc
 CXX=g++
 CFLAG=-Wall -Werror -g
 OBJFILE=-c
+INSTALL=install
 INCLUDE=include
 BIN=bin
 SRC=src
 
-all: one thirteen fourteen fourteenB four seventeen eighteen two twenty five \
+all: createProject one thirteen fourteen fourteenB four seventeen eighteen two twenty five \
 	eight nine anagram cprogWithoutMain maxOccuringChar printDuplicates \
 	printUsage.o removeDuplicates reverseString reverseStringWithoutRecursion \
 	reverseWords stringtoint trial nineteen three
 
+createProject:
+	mkdir -p include bin install src
+
 clean:
-	rm -v $(BIN)/*
+	rm -rv $(BIN)
+
+uninstall:
+	rm -rv $(INSTALL)
 
 one:
 	$(CC) $(CFLAG) $(SRC)/1.c -o $(BIN)/1
