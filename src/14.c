@@ -1,7 +1,6 @@
 #include<stdio.h>
 char value(int x);
 
-
 int main()
 {
     int x;
@@ -19,9 +18,7 @@ char value(int x)
     else if(x==100) return 'C';
     else if(x==500) return 'D';
     else if(x==1000) return 'M';
-
 }
-
 
 void calculate(int x, int v, int m)
 {
@@ -56,8 +53,5 @@ void calculate(int x, int v, int m)
     x = x - (v/m);
     }
     return calculate(x, v, m);
-
-
-
 
 }
