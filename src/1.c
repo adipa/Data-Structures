@@ -8,13 +8,14 @@ int main()
     printf("Enter String: ");
     scanf("%[^\n]s",str);
     printf("Max. occuring char: %c",maxchar(str)); //character with max count
+    return 0;
 }
 
 int maxchar(char *str)
 {
-    int i,max=0,c[256]={0};
+    int i ,max=0,c[256]={0};
     for(i=0 ; str[i]!='\0' ; i++){
-        c[str[i]] += 1;   //count occurrence of each character by its ASCII value
+      c[(int)str[i]] += 1;   //count occurrence of each character by its ASCII value
     }
 
     for(i=1 ; i<256 ; i++){

@@ -10,6 +10,7 @@ int main()
     char str[MAX_SIZE];
     scanf("%[^\n]s", str);
     reverseWords(str);
+    return 0;
 }
 
 void reverseWords(char *str)

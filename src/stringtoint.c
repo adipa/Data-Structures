@@ -2,13 +2,14 @@
 #include<string.h>
 
 int itoa(char *str);
-
+int stringtoint(char *);
 int main()
 {
     char str[20];
     printf("Enter String: ");
     scanf("%s", str);
     printf("%d", stringtoint(str));
+    return 0;
 }
 
 int stringtoint(char *str)

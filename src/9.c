@@ -26,4 +26,5 @@ int main()
     printf("Enter String: ");
     scanf("%s", str);
     first(str);
+    return 0;
 }

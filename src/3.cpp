@@ -21,7 +21,7 @@ void rem_dup_no_order(char* str)
 {
     int i,c[256]={0};
     for(i=0;str[i]!='\0';i++){          //count occurrence of each character by its ASCII value
-        c[str[i]]+=1;
+      c[(int) str[i]]+=1;
     }
     printf("Duplicate Characters: ");
     for(i=0;i<256;i++){
@@ -35,8 +35,8 @@ void rem_dup_order(char* str)
     int i,c[256]={0};
     queue<int> q;
     for(i=0;str[i]!='\0';i++){
-        c[str[i]]+=1;
-        if(c[str[i]]==2 && str[i]!=' ') //push if occurs twice
+      c[(int) str[i]]+=1;
+        if(c[(int) str[i]]==2 && str[i]!=' ') //push if occurs twice
             q.push(str[i]);
 
     }

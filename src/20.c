@@ -10,6 +10,8 @@ int value(int v)
     else if(v=='c' || v=='C') return 100;
     else if(v=='d' || v=='D') return 500;
     else if(v=='m' || v=='M') return 1000;
+    else 
+      return -1;
 
 }
 int convert(char str[])
@@ -30,4 +32,5 @@ int main()
     printf("Enter String: ");
     scanf("%[^\n]s",str);
     printf("Value: %d",convert(str));
+    return 0;
 }

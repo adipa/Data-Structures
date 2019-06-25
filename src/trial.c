@@ -7,7 +7,8 @@ int main ()
     for (i = 0; i < 4; i++)
         arr[i] = i;
     for (i = 0; i < 4; i++) {
-        printf("(%p => %d) ",arr++, *(arr));
+        printf("(%p => %d) ",arr, *(arr));
+	arr++;
     }
     printf("\n");
     free(arr);

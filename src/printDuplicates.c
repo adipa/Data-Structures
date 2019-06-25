@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     }
     printf("Duplicates character from string are: \"%s\"\n",\
         printDuplicates(argv[1], duplicates));
+    return 0;
 }
 
 char *printDuplicates(char *str, char newStr[])
@@ -25,8 +26,8 @@ char *printDuplicates(char *str, char newStr[])
     int ascii[ASCII_CHARACTER_LENGTH] = {0}, i, j;
 
     for (i = 0, j = 0; str[i] != '\0'; i++) {
-        ascii[str[i]] += 1;
-        if (ascii[str[i]] == 2 && str[i] != ' ')
+      ascii[(int) str[i]] += 1;
+      if (ascii[(int) str[i]] == 2 && str[i] != ' ')
             newStr[j++] = str[i];
     }
 

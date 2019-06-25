@@ -15,6 +15,7 @@ int main()
         printf("Strings are rotations of each other");
     else
         printf("Strings aren't rotations of each other");
+    return 0;
 }
 
 int check(char* str1,char* str2)
@@ -28,12 +29,12 @@ int check(char* str1,char* str2)
             i++;
     if(str2[i]=='\0')                           //char not found, strings unegual
         return 0;
-    while(str1[j]!='\0'){                    //till str1 is not traversed check if every char in str1 matches str
+    while(str1[j]!='\0') {
+      //till str1 is not traversed check if every char in str1 matches str
         if(str1[j++]!=str2[i++])
             return 0;
-        if(str2[i]=='\0')                       //come to first position when str2 ends
+        if(str2[i]=='\0') //come to first position when str2 ends
             i=0;
-
     }
     return 1;               //strings are rotations of each other
 }

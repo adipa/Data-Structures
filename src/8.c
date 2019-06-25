@@ -11,6 +11,7 @@ int main()
         printf("No non-repeating character.");
     else
         printf("First non-repeating character: %c",c);
+    return 0;
 }
 
 char first(char* str)

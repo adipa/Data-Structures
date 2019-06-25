@@ -9,6 +9,7 @@ int main()
     printf("Enter character to be removed: ");
     scanf("%c",&c);
     printf("After removal: %s",remove_char(str,c));
+    return 0;
 }
 
 char* remove_char(char* str,char c)
@@ -18,8 +19,10 @@ char* remove_char(char* str,char c)
         if(str[i]==c)
         {
             k=i++;
-            while(str[k]!='\0')
-                str[k]=str[++k];
+            while(str[k]!='\0') {
+                str[k]=str[k+1];
+		k += 1;
+	    }
             i=0;
         }
         else i++;

@@ -7,6 +7,7 @@ int main()
     printf("Enter String: ");
     scanf("%[^\n]s",str);
     printf("No. of words %d",words(str));
+    return 0;
 }
 
 int words(char* str)

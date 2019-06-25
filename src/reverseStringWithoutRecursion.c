@@ -10,15 +10,18 @@ int main()
     char str[MAX_SIZE];
     scanf("%[^\n]s", str);
     printf("%s", reverseString(str));
+    return 0;
 }
 
 char* reverseString(char *str)
 {
     int start = 0, end = strlen(str) - 1;
     while(start < end) {
-        str[start] = str[start]   + str[end];
-        str[end]   = str[start]   - str[end];
-        str[start] = str[start++] - str[end--];
+        str[start] = str[start] + str[end];
+        str[end]   = str[start] - str[end];
+        str[start] = str[start] - str[end];
+	start++;
+	end--;
     }
     return str;
 }

@@ -1,5 +1,7 @@
 #include<stdio.h>
+
 char value(int x);
+void calculate(int, int, int);
 
 int main()
 {
@@ -7,17 +9,27 @@ int main()
     printf("Enter number: ");
     scanf("%d", &x);
     calculate(x,1000,2);
+    return 0;
 }
 
 char value(int x)
 {
-    if(x==1) return 'I';
-    else if(x==5) return 'V';
-    else if(x==10) return 'X';
-    else if(x==50) return 'L';
-    else if(x==100) return 'C';
-    else if(x==500) return 'D';
-    else if(x==1000) return 'M';
+    if(x==1) 
+      return 'I';
+    else if(x==5) 
+      return 'V';
+    else if(x==10) 
+      return 'X';
+    else if(x==50) 
+      return 'L';
+    else if(x==100) 
+      return 'C';
+    else if(x==500) 
+      return 'D';
+    else if (x==1000)
+      return 'M';
+    else 
+      return '\0';
 }
 
 void calculate(int x, int v, int m)

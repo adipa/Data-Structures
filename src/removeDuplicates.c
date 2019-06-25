@@ -28,10 +28,10 @@ char *removeDuplicates(char* str, char newStr[])
 
     for (i = 0, j = 0; str[i] != '\0'; i++) {
         // check if this character already exists in our string.
-        if (ascii[str[i]] == 0 || str[i] == ' ')
+      if (ascii[(int) str[i]] == 0 || str[i] == ' ')
         {
             // set character flag to true.
-            ascii[str[i]] = 1;
+	  ascii[(int) str[i]] = 1;
             // add character to our new string;
             newStr[j++] = str[i];
         }

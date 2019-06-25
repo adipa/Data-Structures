@@ -10,6 +10,7 @@ int main()
     printf("Enter String 2: ");
     fgets(str2,20,stdin);
     printf("String1 after removing characters from String2: %s",rem_dup(str1,str2));
+    return 0;
 
 }
 
@@ -20,8 +21,10 @@ char* rem_dup(char* str1,char* str2)
         if(str2[i]==str1[j])                //characters match
         {
             k=j;                            //start shifting from current match position
-            while(str1[k]!='\0')
-                str1[k]=str1[++k];
+            while(str1[k]!='\0') {
+                str1[k]=str1[k+1];
+		k += 1;
+	    }
             j=0;                            //restore str1 index to 0
 
         }

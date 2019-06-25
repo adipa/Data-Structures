@@ -12,6 +12,7 @@ int main()
         printf("Palindrome");
     else
         printf("Not a palindrome");
+    return 0;
 }
 
 int check(char* str)
