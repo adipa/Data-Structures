@@ -1,0 +1,38 @@
+CC=gcc
+CXX=g++
+CFLAG=-Wall -Werror -g
+OBJFILE=-c
+INSTALL=install
+INCLUDE=include
+BIN=bin
+SRC=src
+TARGET=maxOccuringChar.o printDuplicates.o removeDuplicates.o areAnagrams.o isPalindrome.o
+
+all: createProject main printDuplicates.o removeDuplicates.o areAnagrams.o  isPalindrome.o maxOccuringChar.o 
+
+createProject:
+	mkdir -p include bin install src
+
+clean:
+	rm -rv $(BIN)
+
+uninstall:
+	rm -rv $(INSTALL)
+
+main: $(TARGET)	
+	$(CC) $(CFLAG) $(SRC)/main.c $(BIN)/$(TARGET) 
+
+printDuplicates.o:
+	$(CC) $(OBJFILE) $(SRC)/printDuplicates.c -o $(BIN)/printDuplicates.o -I$(INCLUDE)
+
+removeDuplicates.o:
+	$(CC) $(OBJFILE) $(SRC)/removeDuplicates.c -o $(BIN)/removeDuplicates.o -I$(INCLUDE)
+
+areAnagrams.o:
+	$(CC) $(OBJFILE) $(SRC)/areAnagrams.c -o $(BIN)/areAnagrams.o -I$(INCLUDE)
+
+maxOccuringChar.o:
+	$(CC) $(OBJFILE) $(SRC)/maxOccuringChar.c -o $(BIN)/maxOccuringChar.o -I$(INCLUDE)
+
+isPalindrome.o:
+	$(CC) $(OBJFILE) $(SRC)/isPalindrome.c -o $(BIN)/isPalindrome.o -I$(INCLUDE)
