@@ -1,5 +1,7 @@
-//Read more: http://www.java67.com/2018/04/21-string-programming-and-coding-interview-questions-answers.html#ixzz5po7Wj3BT
-//find the maximum occurring character in given String
+/*
+ * Read more: http://www.java67.com/2018/04/21-string-programming-and-coding-interview-questions-answers.html#ixzz5po7Wj3BT
+ * find the maximum occurring character in given String.
+ */
 #include<stdio.h>
 int maxchar(char *str);
 int main()
