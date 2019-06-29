@@ -7,10 +7,10 @@ INCLUDE=include
 BIN=bin
 SRC=src
 
-all2: createProject one thirteen fourteen fourteenB four seventeen eighteen two twenty five \
+all: createProject one thirteen fourteen fourteenB four seventeen eighteen two twenty five \
 	eight nine anagram cprogWithoutMain maxOccuringChar printDuplicates \
 	printUsage.o removeDuplicates reverseString reverseStringWithoutRecursion \
-	reverseWords stringtoint trial nineteen three
+	reverseWords stringtoint trial nineteen three main
 
 createProject:
 	mkdir -p include bin install src
@@ -100,12 +100,12 @@ nineteen:
 three:
 	$(CXX) $(CFLAG) $(SRC)/3.cpp -o $(BIN)/3
 
-all2:  main main_printDuplicates.o main_removeDuplicates.o main_areAnagrams.o main_isPalindrome.o main_maxOccuringChar.o main_firstNonRepeatingChar.o
-
-
-main: main_maxOccuringChar.o main_printDuplicates.o main_removeDuplicates.o main_areAnagrams.o main_isPalindrome.o main_firstNonRepeatingChar.o
-	$(CC) $(CFLAG) $(SRC)/main.c $(BIN)/main_maxOccuringChar.o $(BIN)/main_printDuplicates.o $(BIN)/main_removeDuplicates.o $(BIN)/main_areAnagrams.o \
+main: main_maxOccuringChar.o main_printDuplicates.o main_removeDuplicates.o \
+	main_areAnagrams.o main_isPalindrome.o main_firstNonRepeatingChar.o 
+	$(CC) $(CFLAG) $(SRC)/main.c $(BIN)/main_maxOccuringChar.o \
+	$(BIN)/main_printDuplicates.o $(BIN)/main_removeDuplicates.o $(BIN)/main_areAnagrams.o \
 	$(BIN)/main_isPalindrome.o $(BIN)/main_firstNonRepeatingChar.o -o $(BIN)/main -I$(INCLUDE)
+
 main_printDuplicates.o:
 	$(CC) $(OBJFILE) $(SRC)/main_printDuplicates.c -o $(BIN)/main_printDuplicates.o -I$(INCLUDE)
 
