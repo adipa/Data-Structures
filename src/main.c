@@ -1,27 +1,25 @@
 #include<stdio.h>
 
-#include"areAnagrams.h"
-
-#include"areRotations.h"
-
-#include"firstNonRepeatingChar.h"
-
-#include"isPalindrome.h"
-
-#include"maxOccuringChar.h"
-
-#include"printDuplicates.h"
-
-#include"removeDuplicates.h"
-
-#include"removeDuplicatesFrom2Strings.h"
+#include "areAnagrams.h"
+#include "areRotations.h"
+#include "firstNonRepeatingChar.h"
+#include "isPalindrome.h"
+#include "maxOccuringChar.h"
+#include "printDuplicates.h"
+#include "removeDuplicates.h"
+#include "removeDuplicatesFrom2Strings.h"
+#include "usage.h"
 
 #define ASCII_CHARACTER_LENGTH 256
 
 int main(int argc, char *argv[])
 {
-  if(argc==2)
+  if(argc < 2)
   {
+    usage(argv[0]);
+  }
+  else if(argc==2)
+   {
     int maxcount[ASCII_CHARACTER_LENGTH] = {0}, size, i = 0;
     char duplicates[ASCII_CHARACTER_LENGTH] = {'\0'}, nonDuplicates[ASCII_CHARACTER_LENGTH] = {'\0'};
     char c = firstNonRepeatingChar(argv[1]);

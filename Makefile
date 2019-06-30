@@ -12,7 +12,7 @@ all: createProject one thirteen fourteen fourteenB four seventeen eighteen two t
 	printUsage.o removeDuplicates reverseString reverseStringWithoutRecursion \
 	reverseWords stringtoint trial nineteen three main_maxOccuringChar.o \
 	main_printDuplicates.o main_removeDuplicates.o main_areAnagrams.o \
-	main_isPalindrome.o main_firstNonRepeatingChar.o main
+	main_isPalindrome.o main_firstNonRepeatingChar.o usage.o main
 
 createProject:
 	mkdir -p include bin install src
@@ -109,7 +109,8 @@ main:
 	$(BIN)/main_removeDuplicates.o \
 	$(BIN)/main_areAnagrams.o \
 	$(BIN)/main_isPalindrome.o \
-	$(BIN)/main_firstNonRepeatingChar.o
+	$(BIN)/main_firstNonRepeatingChar.o \
+	$(BIN)/usage.o
 
 main_printDuplicates.o:
 	$(CC) $(OBJFILE) -o $(BIN)/main_printDuplicates.o -I$(INCLUDE) \
@@ -134,3 +135,7 @@ main_isPalindrome.o:
 main_firstNonRepeatingChar.o:
 	$(CC) $(OBJFILE) -o $(BIN)/main_firstNonRepeatingChar.o -I$(INCLUDE) \
 	$(SRC)/main_firstNonRepeatingChar.c
+
+usage.o:
+	$(CC) $(OBJFILE) -o $(BIN)/usage.o -I$(INCLUDE) \
+	$(SRC)/usage.c
