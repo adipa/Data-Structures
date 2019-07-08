@@ -11,7 +11,7 @@ int main()
   char str[MAX_SIZE];
   int l;  
   scanf("%[^\n]s", str);
-  l= strlen(str) - 1;
+  l = strlen(str) - 1;
   printf("Permutations:\n");
   permuteString(str, 0, l);
   return 0;
