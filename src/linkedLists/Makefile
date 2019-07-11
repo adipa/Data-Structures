@@ -4,7 +4,7 @@ DEBUG=-g -Werror -Wall
 BIN=../../bin
 INCLUDE=../../include
 
-all: linkList.o
+all: clean linkList.o
 	$(CC) $(DEBUG) main.c $(BIN)/linkList.o -I$(INCLUDE) -o $(BIN)/linkList
 
 linkList.o:
