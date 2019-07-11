@@ -21,7 +21,7 @@ Node* createList(Node *head, Node *newNode)
 void printList(Node *head)
 {
     Node *temp = head;
-    while(temp != NULL) {
+    while(temp) {
         printf("%d -> ", temp -> data);
         temp = temp -> next;
     }
