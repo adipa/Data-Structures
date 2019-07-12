@@ -6,15 +6,12 @@ INSTALL=../..install
 INCLUDE=../../include
 BIN=../../bin
 
-all: createProject thirteen fourteen fourteenB four seventeen eighteen two twenty five \
+all: thirteen fourteen fourteenB four seventeen eighteen two twenty five \
 	eight nine anagram cprogWithoutMain maxOccuringChar printDuplicates \
 	printUsage.o removeDuplicates reverseString reverseStringWithoutRecursion \
 	reverseWords stringtoint trial nineteen three main_maxOccuringChar.o \
 	main_printDuplicates.o main_removeDuplicates.o main_areAnagrams.o \
 	main_isPalindrome.o main_firstNonRepeatingChar.o usage.o main
-
-createProject:
-	mkdir -p include bin install src
 
 clean:
 	rm -rv $(BIN)
