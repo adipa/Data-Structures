@@ -11,3 +11,4 @@ Node* createNode(int);
 Node* createList(Node *,Node *);
 Node* reverseList(Node *);
 void printList(Node *);
+int linkListIndexing(Node* head, int i);

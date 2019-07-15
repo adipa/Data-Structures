@@ -39,3 +39,13 @@ Node* reverseList(Node* head)
     }
     return prev;
 }
+
+int linkListIndexing(Node* head, int i)
+{
+  int index = 0;
+  Node* current = head;
+  while(index++ != i) {
+    current = current -> next;
+  }
+  return current -> data;
+}
