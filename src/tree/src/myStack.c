@@ -11,7 +11,7 @@ stk *createStack(int capacity)
 
 int push(stk *s, tNode *newNode)
 {
-    if (s->top == s->capacity)
+    if (s->top == (s->capacity-1))
     {
         return FULL;
     } else {
@@ -24,7 +24,7 @@ int pop(stk *s, tNode *newNode)
 {
     if (s->top == EMPTY)
         return EMPTY;
-    newNode = s->array[s->top--];
+    *newNode = s->array[s->top--];
     return TRUE;
 }
 
