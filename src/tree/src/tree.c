@@ -20,12 +20,12 @@ tNode *createTree(tNode *root, tNode *newNode)
   tNode *temp = root, *parent;
   while(temp) {
     parent = temp;
-    if(temp -> data < newNode -> data)
+    if(temp -> data > newNode -> data)
       temp = temp -> left;
     else
       temp = temp -> right;
   }
-  if(parent -> data < newNode ->data)
+  if(parent -> data > newNode -> data)
     parent -> left = newNode;
   else
     parent -> right = newNode;
@@ -43,7 +43,7 @@ void preOrder(tNode *root)
     }
     if(isEmptyStack(stack))
       break;
-    pop(stack, root);
+    pop(stack, &root);
     root = root -> right;
   }
 }

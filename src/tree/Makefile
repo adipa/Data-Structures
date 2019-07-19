@@ -1,6 +1,6 @@
 CC=gcc
 CFLAG=-Wall -Werror -g
-OBJFILE=-c
+OBJFILE=-c -g
 SRC=src
 BIN=bin
 INCLUDE=include

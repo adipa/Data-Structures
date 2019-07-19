@@ -19,7 +19,7 @@ typedef struct stack {
 
 stk *createStack(int capacity);
 int push(stk *s, tNode *newNode);
-int pop(stk *s, tNode *newNode);
+int pop(stk *s, tNode **root);
 void deleteStack(stk *s);
 int isEmptyStack(stk *s);
 int isFullStack(stk *s);

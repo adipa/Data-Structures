@@ -22,11 +22,11 @@ int push(stk *s, tNode *newNode)
     return TRUE;
 }
 
-int pop(stk *s, tNode *newNode)
+int pop(stk *s, tNode **root)
 {
     if (s->top == EMPTY)
         return EMPTY;
-    newNode = s->array[s->top--];
+    *root = s->array[(s->top)--];
     return TRUE;
 }
 
