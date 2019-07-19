@@ -1,3 +1,5 @@
+#include<stdio.h>
+
 #include "myStack.h"
 
 stk *createStack(int capacity)
@@ -24,7 +26,7 @@ int pop(stk *s, tNode *newNode)
 {
     if (s->top == EMPTY)
         return EMPTY;
-    *newNode = s->array[s->top--];
+    newNode = s->array[s->top--];
     return TRUE;
 }
 
