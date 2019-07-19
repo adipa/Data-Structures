@@ -18,7 +18,7 @@ tree.o:
 	$(CC) $(OBJFILE) $(SRC)/tree.c -o $(BIN)/tree.o \
 	-I$(INCLUDE)
 
-main: 
+main: myStack.o tree.o
 	$(CC) $(CFLAG) $(SRC)/main.c -o $(BIN)/main \
 	-I$(INCLUDE)
 
