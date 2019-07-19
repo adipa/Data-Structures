@@ -1,7 +1,5 @@
 #include<stdlib.h>
 
-#include"myStack.h"
-
 typedef struct tree
 {
   int data;

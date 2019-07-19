@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 #include "myStack.h"
-#include "myTree.h"
 
 int main()
 {
@@ -13,5 +12,6 @@ int main()
   }
   printf("Preorder Traversal:\n");
   preOrder(root);
+  return 0;
 }
 

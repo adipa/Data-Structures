@@ -5,10 +5,10 @@ SRC=src
 BIN=bin
 INCLUDE=include
 
-all: createProject myStack tree main
+all: createProject myStack.o tree.o main
 
 createProject:
-	mkdir $(BIN) $(INSTALL)
+	mkdir -p $(BIN) $(INSTALL)
 
 myStack.o:
 	$(CC) $(OBJFILE) $(SRC)/myStack.c -o $(BIN)/myStack.o \
@@ -19,7 +19,7 @@ tree.o:
 	-I$(INCLUDE)
 
 main: myStack.o tree.o
-	$(CC) $(CFLAG) $(SRC)/main.c -o $(BIN)/main \
+	$(CC) $(CFLAG) $(SRC)/main.c $(BIN)/tree.o $(BIN)/myStack.o -o $(BIN)/main \
 	-I$(INCLUDE)
 
 clean:

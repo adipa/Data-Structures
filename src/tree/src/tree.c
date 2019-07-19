@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-#include"myTree.h"
+#include"myStack.h"
 
 tNode *createNode(int data)
 {
