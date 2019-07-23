@@ -4,8 +4,11 @@ DEBUG=-g -Werror -Wall
 BIN=../../bin
 INCLUDE=../../include
 
-all: linkList.o
+all: createProject linkList.o
 	$(CC) $(DEBUG) main.c $(BIN)/linkList.o -I$(INCLUDE) -o $(BIN)/linkList
+
+createProject:
+	mkdir -p $(BIN)
 
 linkList.o:
 	$(CC) $(OBJ) linkList.c -o $(BIN)/linkList.o -I$(INCLUDE)

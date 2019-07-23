@@ -8,10 +8,11 @@ int main()
         head = createList(head, createNode(i));
     printf("Linklist:\n");
     printList(head);
-    printf("Accessing Linklist using indexing\n");
+    printf("\nAccessing Linklist using indexing\n");
     scanf("%d", &index);
-    printf("Node at index %d: %d\n", index, linkListIndexing(head, index)); 
-    printf("Reversed Linklist:\n");
+    printf("\nNode at index %d: %d\n", index, linkListIndexing(head, index)); 
+    printf("\nLength of Linklist: %d\n",length(head,0));
+    printf("\nReversed Linklist:\n");
     printList(reverseList(head));
     return 0;
 }

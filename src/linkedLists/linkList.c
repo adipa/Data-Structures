@@ -49,3 +49,10 @@ int linkListIndexing(Node* head, int i)
   }
   return current -> data;
 }
+
+int length(Node* head, int len)
+{
+  if(!head)
+    return len;
+  length(head -> next, len + 1);
+}
