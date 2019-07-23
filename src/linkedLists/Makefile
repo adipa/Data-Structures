@@ -7,6 +7,9 @@ INCLUDE=../../include
 all: createProject linkList.o
 	$(CC) $(DEBUG) main.c $(BIN)/linkList.o -I$(INCLUDE) -o $(BIN)/linkList
 
+#usage.o:
+#	$(CC) $(OBJ) usage.c -o $(BIN)/usage.o -I$(INCLUDE)
+
 createProject:
 	mkdir -p $(BIN)
 

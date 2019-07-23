@@ -56,3 +56,17 @@ int length(Node* head, int len)
     return len;
   length(head -> next, len + 1);
 }
+
+Node* insertNodeInMiddle(Node *head, Node *newNode)
+{
+  Node *slow = head, *fast = head;
+  while(fast->next) {
+    slow = slow -> next;
+    fast = fast -> next -> next;
+  }
+  newNode -> next = slow ->next;
+  slow -> next = newNode;
+  return head;
+}
+
+  
