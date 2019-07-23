@@ -5,7 +5,7 @@ SRC=src
 BIN=bin
 INCLUDE=include
 
-all: createProject myStack.o tree.o main
+all: clean createProject myStack.o tree.o main run
 
 createProject:
 	mkdir -p $(BIN) $(INSTALL)
@@ -23,7 +23,7 @@ main: myStack.o tree.o
 	-I$(INCLUDE)
 
 clean:
-	rm -rv $(BIN)
+	rm -rv $(BIN) || exit 0
 
 uninstall:
 	rm -rv$(INSTALL)
