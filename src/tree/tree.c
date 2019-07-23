@@ -47,3 +47,19 @@ void preOrder(tNode *root)
     root = root -> right;
   }
 }
+
+void inOrder(tNode *root)
+{
+  stk *stack = createStack(10);
+  while(1) {
+    while(root) {
+      push(stack, root);
+      root = root -> left;
+    }
+    if(isEmptyStack(stack))
+      break;
+    pop(stack, &root);
+    printf("%d ", root -> data);
+    root = root -> right;
+  }
+}

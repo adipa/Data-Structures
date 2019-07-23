@@ -9,3 +9,4 @@ typedef struct tree
 tNode *createNode(int data);
 tNode *createTree(tNode *root, tNode *newNode);
 void preOrder(tNode *root);
+void inOrder(tNode *root);
