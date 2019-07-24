@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
       printf("'%c' ", (char) maxcount[i]);
     }
   }
-  
+
   else if(!strcmp(argv[1],"prdup"))
-  { 
+  {
     int duplicates[ASCII_CHARACTER_LENGTH] = {0}, size, i;
     size = printDuplicates(argv[1], duplicates);
     printf("\nDuplicate characters from string are: ");
@@ -75,4 +75,4 @@ int main(int argc, char *argv[])
   }
   return 0;
 }
-    
+

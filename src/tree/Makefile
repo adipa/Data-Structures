@@ -3,7 +3,7 @@ CFLAG=-Wall -Werror -g
 OBJFILE=-c -g
 SRC=src
 BIN=bin
-INCLUDE=include
+INCLUDE=../../include/tree
 
 all: clean createProject myStack.o tree.o main run
 

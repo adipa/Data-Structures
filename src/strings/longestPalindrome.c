@@ -13,12 +13,12 @@ int main()
   scanf("%[^\n]s", str);
   printf("\nLength: %d\n",longestPalindrome(str));
   return 0;
-}  
+}
 
 int longestPalindrome(char* str)
 {
-  int maxLength = 1, start = 0, len = strlen(str); 
-  int i, low, high;    
+  int maxLength = 1, start = 0, len = strlen(str);
+  int i, low, high;
   for(i = 1; i <= len; i++) {
     //longest even palindromic substring
     low  = i - 1;

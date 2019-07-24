@@ -9,7 +9,7 @@ void swap(char *i, char *j);
 int main()
 {
   char str[MAX_SIZE];
-  int l;  
+  int l;
   scanf("%[^\n]s", str);
   l = strlen(str) - 1;
   printf("Permutations:\n");
@@ -31,7 +31,7 @@ void permuteString(char *str, int start, int end)
 	swap((str + start), (str + i));
 	permuteString(str, start + 1, end);
 	swap((str + start), (str + i));
-      }   
+      }
     }
   }
 }
@@ -42,4 +42,4 @@ void swap(char *i, char *j)
   temp = *i;
   *i = *j;
   *j = temp;
-}    
+}

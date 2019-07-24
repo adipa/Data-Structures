@@ -2,7 +2,7 @@ CC=gcc
 OBJ=-c
 DEBUG=-g -Werror -Wall
 BIN=../../bin
-INCLUDE=../../include
+INCLUDE=../../include/linklist
 
 all: createProject linkList.o
 	$(CC) $(DEBUG) main.c $(BIN)/linkList.o -I$(INCLUDE) -o $(BIN)/linkList

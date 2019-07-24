@@ -69,4 +69,4 @@ Node* insertNodeInMiddle(Node *head, Node *newNode)
   return head;
 }
 
-  
+
