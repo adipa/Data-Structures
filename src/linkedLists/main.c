@@ -5,7 +5,7 @@ int main()
   int i, index, middle;
     Node *head = NULL;
     for (i = 0; i < 15; i++)
-        head = createList(head, createNode(i));
+      head = createList(head, createNode(i));
     printf("Linklist:\n");
     printList(head);
     printf("\nAccessing Linklist using indexing\n");

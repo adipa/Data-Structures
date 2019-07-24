@@ -14,5 +14,3 @@ void printList(Node *);
 int linkListIndexing(Node* head, int i);
 int length(Node* head, int len);
 Node* insertNodeInMiddle(Node *head, Node *newNode);
-
-

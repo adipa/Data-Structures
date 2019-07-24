@@ -11,15 +11,15 @@ createProject:
 	mkdir -p $(BIN) $(INSTALL)
 
 myStack.o:
-	$(CC) $(OBJFILE) $(SRC)/myStack.c -o $(BIN)/myStack.o \
+	$(CC) $(OBJFILE) myStack.c -o $(BIN)/myStack.o \
 	-I$(INCLUDE)
 
 tree.o:
-	$(CC) $(OBJFILE) $(SRC)/tree.c -o $(BIN)/tree.o \
+	$(CC) $(OBJFILE) tree.c -o $(BIN)/tree.o \
 	-I$(INCLUDE)
 
 main: myStack.o tree.o
-	$(CC) $(CFLAG) $(SRC)/main.c $(BIN)/tree.o $(BIN)/myStack.o -o $(BIN)/main \
+	$(CC) $(CFLAG) main.c $(BIN)/tree.o $(BIN)/myStack.o -o $(BIN)/main \
 	-I$(INCLUDE)
 
 clean:
