@@ -10,9 +10,9 @@ int main()
   for(i = 0; i < sizeof(treeElements)/sizeof(treeElements[0]); i++) {
     root = createTree(root, createNode(treeElements[i]));
   }
-  printf("Preorder Traversal:\n");  
+  printf("Preorder Traversal:\n");
   preOrder(root);
-  printf("\nInorder Traversal:\n");  
+  printf("\nInorder Traversal:\n");
   inOrder(root);
   return 0;
 }

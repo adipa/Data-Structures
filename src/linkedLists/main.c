@@ -10,7 +10,7 @@ int main()
     printList(head);
     printf("\nAccessing Linklist using indexing\n");
     scanf("%d", &index);
-    printf("\nNode at index %d: %d\n", index, linkListIndexing(head, index)); 
+    printf("\nNode at index %d: %d\n", index, linkListIndexing(head, index));
     printf("\nLength of Linklist: %d\n",length(head,0));
     printf("\nInsert Node in middle of LL\n");
     scanf("%d", &middle);

@@ -8,7 +8,7 @@ int main()
 {
     char str1[20],str2[20];
     printf("Enter String 1: ");
-    scanf("%[^\n]s",str1); 
+    scanf("%[^\n]s",str1);
     printf("Enter String 2: ");
     scanf("%[^\n]s",str2);
     if(check(str1,str2))

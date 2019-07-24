@@ -8,10 +8,10 @@ char firstNonRepeatingChar(char *str)
     {
       if((str[i] == str[j]) && (i != j))
         {
-            i++; 
+            i++;
 	    j = 0;
         }
-        else 
+        else
 	    j++;
         if(str[j] == '\0')
             break;

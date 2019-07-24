@@ -1,7 +1,7 @@
 /* Print duplicate characters from string */
 #include "printDuplicates.h"
 
-#define ASCII_CHARACTER_LENGTH 256 
+#define ASCII_CHARACTER_LENGTH 256
 
 char *printDuplicates(char *str, char newStr[])
 {
