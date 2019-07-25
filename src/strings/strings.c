@@ -1,4 +1,4 @@
-#include<string.h>
+//#include<string.h>
 #include "strings.h"
 
 #define ASCII_CHARACTER_LENGTH 256
