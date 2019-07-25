@@ -5,28 +5,28 @@ OBJFILE=-c
 INSTALL=../..install
 INCLUDE=../../include
 BIN=../../bin/string
-TARGET=maxOccuringChar.o \
-	printDuplicates.o \
-	rmDup.o \
-	areAnagrams.o \
-	isPalindrome.o \
+TARGET=areAnagrams.o \
+	areRotations.o \
+	countWords.o \
 	firstUniqueChar.o \
+	isPalindrome.o \
 	longestPalindrome.o \
+	maxOccuringChar.o \
+	permuteString.o \
+	printDuplicates.o \
 	revStr.o \
 	revStrIterative.o \
 	revWords.o \
-	romanToInteger.o \
-	stringToInteger.o \
-	areRotations.o \
-	countWords.o \
-	rmDupFromTwoStr.o \
 	rmChar.o \
-	permuteString.o
+	rmDup.o \
+	rmDupFromTwoStr.o \
+	romanToInteger.o \
+	stringToInteger.o
 
 all: createProject usage.o $(TARGET) strings
 
-createProject: 
-	mkdir -p $(BIN) 
+createProject:
+	mkdir -p $(BIN)
 
 clean:
 	rm -rv $(BIN)
