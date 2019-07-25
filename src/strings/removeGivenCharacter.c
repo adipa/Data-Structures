@@ -15,7 +15,7 @@ int main()
 char* removeGivenCharacter(char* str, char c)
 {
   int i = 0, k;
-  while(str[i] != '\0'){
+  while(str[i] != '\0') {
     if(str[i] == c)
     {
       k = i++;

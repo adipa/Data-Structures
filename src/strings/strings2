@@ -17,7 +17,7 @@ int main()
 char* rem_dup(char* str1,char* str2)
 {
     int i=0,j=0,k;
-    while(str2[i]!='\0'){
+    while(str2[i]!='\0') {
         if(str2[i]==str1[j])                //characters match
         {
             k=j;                            //start shifting from current match position

@@ -32,14 +32,14 @@ char value(int x)
 void calculate(int x)
 {
     int c, d, e, n, i=1;
-    while(x != 0){
+    while(x != 0) {
         n = x%10;
         if(n != 0)
         {
         c = value(i);
         if(n >= 1 && n <= 3)
         {
-            while(n != 0){
+            while(n != 0) {
                 printf("%c", c);
                 n -= 1;
             }
@@ -52,7 +52,7 @@ void calculate(int x)
             else
             {
                 printf("%c",d);
-                while(n != 5){
+                while(n != 5) {
                     printf("%c", c);
                     n -= 1;
                 }

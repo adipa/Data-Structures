@@ -3,7 +3,7 @@
 char* removeDuplicatesFrom2Strings(char* str1,char* str2)
 {
   int i = 0,j = 0,k;
-  while(str2[i] != '\0'){
+  while(str2[i] != '\0') {
     //characters match$
     if(str2[i] == str1[j])
     {

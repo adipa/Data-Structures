@@ -14,7 +14,7 @@ int main()
 char* rem_dup(char* str)
 {
     int i=1,j=0,k;
-    while(str[i]!='\0'){
+    while(str[i]!='\0') {
         if(str[i]==str[j] && str[i]!=' ') //if the character has occurred earlier
         {
             k=i;

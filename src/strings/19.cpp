@@ -21,7 +21,7 @@ int check(char* str)
 {
     stack<char> s;
     char c,t;int i=0;
-    while(str[i]!='\0'){
+    while(str[i]!='\0') {
         c=str[i++];
         if(c=='{' || c=='[' || c=='(')   //push if opening  bracket
             s.push(c);

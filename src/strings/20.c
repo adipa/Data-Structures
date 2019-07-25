@@ -17,7 +17,7 @@ int value(int v)
 int convert(char str[])
 {
     int v=0,i=0;
-    while(str[i]!='\0'){
+    while(str[i]!='\0') {
         if(value(str[i])<value(str[i+1]))
             v=v-value(str[i]);
         else v=v+value(str[i]);
