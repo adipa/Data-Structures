@@ -1,6 +1,4 @@
-#include<stdio.h>
-#include<string.h>
-#include "strings.h" 
+#include "string/strings.h" 
 
 void printPalindrome(char *str, int start, int maxLength)
 {

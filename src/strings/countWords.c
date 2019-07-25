@@ -1,4 +1,4 @@
-#include "strings.h"
+#include "string/strings.h"
 
 int countWords(char* str)
 {

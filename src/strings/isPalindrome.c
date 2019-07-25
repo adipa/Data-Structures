@@ -1,9 +1,5 @@
 //Check if a given String is Palindrome or not
-#include<string.h>
-#include "strings.h"
-
-#define TRUE 1
-#define FALSE 0
+#include "string/strings.h"
 
 int isPalindrome(char *str)
 {

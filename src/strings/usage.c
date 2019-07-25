@@ -7,7 +7,7 @@ void usage(char *filename)
   \n\t Maximum occuring character  \
   \n\t Print duplicates  \
   \n\t Remove duplicates  \
-  \n\t First non-repeating character  \
+  \n\t First unique character  \
   \n\t Check if palindrome  \
   \n\t Longest Palindrome  \
   \n<2> <string>  \
@@ -23,6 +23,6 @@ void usage(char *filename)
   \n<6> <string> \
   \n\t Count words \
   \n\t Reverse words \
-  \n<7> <string>  \
+  \n<7> <string> \
   \n\t String to integer");
 }

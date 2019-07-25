@@ -1,6 +1,4 @@
-#include "strings.h"
-
-#define ASCII_LENGTH 256
+#include "string/strings.h"
 
 int maxOccuringChar(char *str, int maxCount[])
 {

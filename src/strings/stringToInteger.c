@@ -1,5 +1,4 @@
-#include<string.h>
-#include "strings.h"
+#include "string/strings.h"
 
 int stringToInteger(char *str)
 {

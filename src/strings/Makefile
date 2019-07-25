@@ -4,23 +4,23 @@ CFLAG=-Wall -Werror -g
 OBJFILE=-c
 INSTALL=../..install
 INCLUDE=../../include
-BIN=../../bin
+BIN=../../bin/string
 TARGET=maxOccuringChar.o \
 	printDuplicates.o \
-	removeDuplicates.o \
+	rmDup.o \
 	areAnagrams.o \
 	isPalindrome.o \
-	firstNonRepeatingChar.o \
+	firstUniqueChar.o \
 	longestPalindrome.o \
-	reverseString.o \
-	reverseStringWithoutRecursion.o \
-	reverseWords.o \
+	revStr.o \
+	revStrIterative.o \
+	revWords.o \
 	romanToInteger.o \
 	stringToInteger.o \
 	areRotations.o \
 	countWords.o \
-	removeDuplicatesFrom2Strings.o \
-	removeGivenCharacter.o \
+	rmDupFromTwoStr.o \
+	rmChar.o \
 	permuteString.o
 
 all: createProject usage.o $(TARGET) strings
@@ -34,41 +34,41 @@ clean:
 uninstall:
 	rm -rv $(INSTALL)
 
-reverseString.o:
-	$(CC) $(OBJFILE) -o $(BIN)/reverseString.o -I$(INCLUDE) \
-	reverseString.c
+revStr.o:
+	$(CC) $(OBJFILE) -o $(BIN)/revStr.o -I$(INCLUDE) \
+	revStr.c
 
-reverseWords.o:
-	$(CC) $(OBJFILE) -o $(BIN)/reverseWords.o -I$(INCLUDE) \
-	reverseWords.c
+revWords.o:
+	$(CC) $(OBJFILE) -o $(BIN)/revWords.o -I$(INCLUDE) \
+	revWords.c
 
 countWords.o:
 	$(CC) $(OBJFILE) -o $(BIN)/countWords.o -I$(INCLUDE) \
 	countWords.c
 
-reverseStringWithoutRecursion.o:
-	$(CC) $(OBJFILE) -o $(BIN)/reverseStringWithoutRecursion.o \
-	-I$(INCLUDE) reverseStringWithoutRecursion.c
+revStrIterative.o:
+	$(CC) $(OBJFILE) -o $(BIN)/revStrIterative.o -I$(INCLUDE) \
+	revStrIterative.c
 
 stringToInteger.o:
-	$(CC) $(OBJFILE) -o $(BIN)/printDuplicates.o -I$(INCLUDE) \
+	$(CC) $(OBJFILE) -o $(BIN)/stringToInteger.o -I$(INCLUDE) \
 	stringToInteger.c
 
 printDuplicates.o:
 	$(CC) $(OBJFILE) -o $(BIN)/printDuplicates.o -I$(INCLUDE) \
 	printDuplicates.c
 
-removeDuplicates.o:
-	$(CC) $(OBJFILE) -o $(BIN)/removeDuplicates.o -I$(INCLUDE) \
-	removeDuplicates.c
+rmDup.o:
+	$(CC) $(OBJFILE) -o $(BIN)/rmDup.o -I$(INCLUDE) \
+	rmDup.c
 
-removeDuplicatesFrom2Strings.o:
-	$(CC) $(OBJFILE) -o $(BIN)/removeDuplicatesFrom2Strings.o -I$(INCLUDE) \
-	removeDuplicatesFrom2Strings.c
+rmDupFromTwoStr.o:
+	$(CC) $(OBJFILE) -o $(BIN)/rmDupFromTwoStr.o -I$(INCLUDE) \
+	rmDupFromTwoStr.c
 
-removeGivenCharacter.o:
-	$(CC) $(OBJFILE) -o $(BIN)/removeGivenCharacter.o -I$(INCLUDE) \
-	removeGivenCharacter.c
+rmChar.o:
+	$(CC) $(OBJFILE) -o $(BIN)/rmChar.o -I$(INCLUDE) \
+	rmChar.c
 
 areAnagrams.o:
 	$(CC) $(OBJFILE) -o $(BIN)/areAnagrams.o -I$(INCLUDE) \
@@ -83,20 +83,16 @@ maxOccuringChar.o:
 	maxOccuringChar.c
 
 isPalindrome.o:
-	$(CC) $(OBJFILE) -o $(BIN)/isPalindrome.o -I$(INCLUDE)/strings \
+	$(CC) $(OBJFILE) -o $(BIN)/isPalindrome.o -I$(INCLUDE) \
 	isPalindrome.c
 
 longestPalindrome.o:
 	$(CC) $(OBJFILE) -o $(BIN)/longestPalindrome.o -I$(INCLUDE) \
 	longestPalindrome.c
 
-firstNonRepeatingChar.o:
-	$(CC) $(OBJFILE) -o $(BIN)/firstNonRepeatingChar.o -I$(INCLUDE) \
-	firstNonRepeatingChar.c
-
-usage.o:
-	$(CC) $(OBJFILE) -o $(BIN)/usage.o -I$(INCLUDE) \
-	usage.c
+firstUniqueChar.o:
+	$(CC) $(OBJFILE) -o $(BIN)/firstUniqueChar.o -I$(INCLUDE) \
+	firstUniqueChar.c
 
 romanToInteger.o:
 	$(CC) $(OBJFILE) -o $(BIN)/romanToInteger.o -I$(INCLUDE) \
@@ -106,9 +102,13 @@ permuteString.o:
 	$(CC) $(OBJFILE) -o $(BIN)/permuteString.o -I$(INCLUDE) \
 	permuteString.c
 
+usage.o:
+	$(CC) $(OBJFILE) -o $(BIN)/usage.o -I$(INCLUDE) \
+	usage.c
+
 strings:
-	$(CC) $(CFLAG) strings.c -o $(BIN)/main -I$(INCLUDE) \
-	$(BIN)/isPalindrome.o
+	$(CC) $(CFLAG) strings.c -o $(BIN)/strings -I$(INCLUDE) \
+	$(BIN)/*.o
 
 run:
 	$(BIN)/strings

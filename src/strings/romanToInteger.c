@@ -1,6 +1,6 @@
-#include"strings.h"
+#include"string/strings.h"
 
-int value(int v)
+int RToIvalue(int v)
 {
   if(v == 'i' || v == 'I') return 1;
   else if(v == 'v' || v == 'V') return 5;
@@ -13,14 +13,14 @@ int value(int v)
     return -1;
 }
 
-int convert(char *str)
+int RToIconvert(char *str)
 {
   int v = 0, i = 0;
   while(str[i] != '\0') {
-    if(value(str[i]) < value(str[i+1]))
-      v= v - value(str[i]);
+    if(RToIvalue(str[i]) < RToIvalue(str[i+1]))
+      v= v - RToIvalue(str[i]);
     else
-      v = v + value(str[i]);
+      v = v + RToIvalue(str[i]);
     i++;
   }
   return v;

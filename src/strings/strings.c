@@ -1,7 +1,5 @@
-//#include<string.h>
+#include "helperFunctions.h"
 #include "string/strings.h"
-
-#define ASCII_CHARACTER_LENGTH 256
 
 int main(int argc, char *argv[])
 {
@@ -12,9 +10,9 @@ int main(int argc, char *argv[])
   int len = strlen(argv[2]);
   if(!strcmp(argv[1],"1"))
   {
-    int maxcount[ASCII_CHARACTER_LENGTH] = {0}, size, i;
-    int duplicates[ASCII_CHARACTER_LENGTH] = {0};
-    char nonDuplicates[ASCII_CHARACTER_LENGTH] = {'\0'};
+    int maxcount[ASCII_LENGTH] = {0}, size, i;
+    int duplicates[ASCII_LENGTH] = {0};
+    char nonDuplicates[ASCII_LENGTH] = {'\0'};
     char c;
 
     size = maxOccuringChar(argv[2], maxcount);
@@ -26,59 +24,62 @@ int main(int argc, char *argv[])
     size = printDuplicates(argv[2], duplicates);
     printf("\nDuplicate characters from string are: ");
     for(i = 0; i <= size; i++) {
-      printf("'%d' ",(char) duplicates[i]);
+       printf("'%d' ",(char) duplicates[i]);
     }
 
-    c = firstNonRepeatingChar(argv[2]);
+    printf("After removing Duplicates: %s\n", rmDup(argv[2], nonDuplicates));
+
+    c = firstUniqueChar(argv[2]);
     if(c == '\0')
-      printf("No non repeating character.\n");
+      printf("No unique character.\n");
     else
-      printf("First non repeating character: %c\n", c);
+      printf("First unique character: %c\n", c);
 
     if(isPalindrome(argv[2]))
       printf("%s is a palindrome\n", argv[2]);
     else
       printf("%s is not a palindrome\n", argv[2]);
 
-    printf("Length of longest palindrome: %d\n", longestPalindrome(argv[2]));
+    printf("\nLength of longest palindrome: %d\n", longestPalindrome(argv[2]));
   }
 
   else if(!strcmp(argv[1],"2"))
   {
-    printf("\nReversed String: "); 
-    reverseString(argv[2], 0, len - 1);
+    printf("Reversed String: ");
+    revStr(argv[2], 0, len - 1);
 
-    printf("\n%s", reverseStringWORecursion(argv[2]));
+    printf("\n%s", revStrIterative(argv[2]));
   }
 
   else if(!strcmp(argv[1],"3"))
   {
-    printf("\nPermutations:\n");
+    printf("Permutations:\n");
     permuteString(argv[2], 0, len - 1);
   }
 
   else if(!strcmp(argv[1],"4"))
-    convert(argv[2]);
+    RToIconvert(argv[2]);
 
   else if(!strcmp(argv[1],"5"))
   {
     if(areAnagrams(argv[2], argv[3]))
     {
-      printf("\nStrings are anagrams of each other.");
+      printf("Strings are anagrams of each other.");
       if(areRotations(argv[2], argv[3]))
-    printf("\nStrings are rotations of each other.");
-      else 
-    printf("\nStrings are not rotations of each other.");
+	printf("\nStrings are rotations of each other.");
+      else
+	printf("\nStrings are not rotations of each other.");
+      printf("After removing duplicates: %s\n", rmDupFromTwoStr(argv[2], argv[3]));
     }
-    else 
+    else
       printf("\nStrings are not anagrams of each other.");
   }
 
   else if(!strcmp(argv[1],"6"))
   {
-    printf("\nNumber of words: %d\n", countWords(argv[2]));
+    printf("Number of words: %d\n", countWords(argv[2]));
 
-    reverseWords(argv[2]);
+    revWords(argv[2]);
   }
   else //(!strcmp(argv[1],"7"))
     stringToInteger(argv[2]);
