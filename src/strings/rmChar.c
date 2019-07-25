@@ -8,7 +8,7 @@ char *rmChar(char *str, char c)
     {
       k = i++;
       while(str[k] != '\0') {
-	str[k] = str[k+1];
+	str[k] = str[k + 1];
 	k += 1;
       }
       i = 0;
