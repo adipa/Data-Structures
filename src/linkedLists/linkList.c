@@ -7,7 +7,7 @@ Node *createNode(int data)
     return newNode;
 }
 
-Node* createList(Node *head, Node *newNode)
+Node *createList(Node *head, Node *newNode)
 {
     Node *temp = head;
     if (!head)
@@ -28,7 +28,7 @@ void printList(Node *head)
     printf("\n");
 }
 
-Node* reverseList(Node* head)
+Node *reverseList(Node *head)
 {
     Node *cur = head, *prev = NULL, *next;
     while(cur) {
@@ -43,28 +43,36 @@ Node* reverseList(Node* head)
 int linkListIndexing(Node* head, int i)
 {
   int index = 0;
-  Node* current = head;
+  Node *current = head;
   while(index++ != i) {
     current = current -> next;
   }
   return current -> data;
 }
 
-int length(Node* head, int len)
+int length(Node *head, int len)
 {
   if(!head)
     return len;
   length(head -> next, len + 1);
 }
 
-Node* insertNodeInMiddle(Node *head, Node *newNode)
+Node *insertNodeInMiddle(Node *head, Node *newNode)
 {
-  Node *slow = head, *fast = head;
-  while(fast->next) {
-    slow = slow -> next;
-    fast = fast -> next -> next;
+  Node *slowPtr = NULL, *fastPtr = NULL;
+  if(!head)
+    return newNode;
+  if(!head -> next) {
+    newNode -> next = head;
+    return newNode;
   }
-  newNode -> next = slow ->next;
-  slow -> next = newNode;
+  slowPtr = head;
+  fastPtr = head -> next;
+  while(fastPtr -> next && fastPtr -> next -> next) {
+    slowPtr = slowPtr -> next;
+    fastPtr = fastPtr -> next -> next;
+  }
+  newNode -> next = slowPtr ->next;
+  slowPtr -> next = newNode;
   return head;
 }

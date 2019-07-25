@@ -1,7 +1,7 @@
 #include "linkList.h"
 
-#define MAX 15
-#define INDEX 5
+#define MAX 10
+#define INDEX 1
 #define MIDDLE 100
 
 int main()
@@ -13,7 +13,7 @@ int main()
   printf("Linklist:\n");
   printList(head);
   printf("\nAccessing Linklist using indexing\n");
-  printf("\nNode at index %d: %d\n", 10, linkListIndexing(head, INDEX));
+  printf("\nNode at index %d: %d\n", INDEX, linkListIndexing(head, INDEX));
   printf("\nLength of Linklist: %d\n",length(head,0));
   printf("\nInsert Node in middle of LL\n");
   head = insertNodeInMiddle(head, createNode(MIDDLE));
