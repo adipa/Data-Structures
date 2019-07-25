@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     usage(argv[0]);
   }
   int len = strlen(argv[2]);
-  if(!strcmp(argv[1],"one"))
+  if(!strcmp(argv[1],"1"))
   {
     int maxcount[ASCII_CHARACTER_LENGTH] = {0}, size, i;
     int duplicates[ASCII_CHARACTER_LENGTH] = {0};
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     printf("Length of longest palindrome: %d\n", longestPalindrome(argv[2]));
   }
   
-  else if(argv[1] == 'Op2')
+  else if(!strcmp(argv[1],"2"))
   {
     printf("\nReversed String: "); 
     reverseString(argv[2], 0, len - 1);
@@ -51,16 +51,16 @@ int main(int argc, char *argv[])
     printf("\n%s", reverseStringWORecursion(argv[2]));
   }
 
-  else if(argv[1] == 'Op3')
+  else if(!strcmp(argv[1],"3"))
   {
     printf("\nPermutations:\n");
     permuteString(argv[2], 0, len - 1);
   }
 
-  else if(argv[1] == 'Op4')
+  else if(!strcmp(argv[1],"4"))
     convert(argv[2]);
 
-  else if(argv[1] == 'Op5')
+  else if(!strcmp(argv[1],"5"))
   {
     if(areAnagrams(argv[2], argv[3]))
     {  
@@ -74,12 +74,14 @@ int main(int argc, char *argv[])
       printf("\nStrings are not anagrams of each other.");
   }
 
-  else if(argv[1] == 'Op6')
+  else if(!strcmp(argv[1],"6"))
   {
     printf("\nNumber of words: %d\n", countWords(argv[2]));
     
     reverseWords(argv[2]);
   }
-  else if(argv[1] == 'Op7')
+  else //(!strcmp(argv[1],"7"))
     stringToInteger(argv[2]);
+  
+  return 0;
 }

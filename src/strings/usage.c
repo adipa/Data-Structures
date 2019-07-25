@@ -2,9 +2,27 @@
 
 void usage(char *filename)
 {
-  printf("Usage %s <Options> <String1> <String2(optional)> \
-  \nOptions: \
-  \n\t maxchar \n\t\t-Maximum Occuring Character \n\t prdup \n\t\t-Print Duplicates \
-  \n\t rmdup \n\t\t-Remove Duplicates from string \n\t pal \n\t\t-Check for Palindrome \
-  \n\t anagram \n\t\t-Check for Anagram\n ", filename);
+  printf("Usage %s <Options> <String1> <String2(optional)>", filename);
+  printf("\n<1> <string> \
+  \n\t Maximum occuring character  \
+  \n\t Print duplicates  \
+  \n\t Remove duplicates  \
+  \n\t First non-repeating character  \
+  \n\t Check if palindrome  \
+  \n\t Longest Palindrome  \
+  \n<2> <string>  \
+  \n\t Reverse string  \
+  \n\t Reverse string (W/O Recursion)  \
+  \n<3> <string>  \
+  \n\t Permutations of string  \
+  \n<4> <string>  \
+  \n\t Covert Roman number to Integer \
+  \n<5> <string1> <string2> \
+  \n\t Are strings anagrams? \
+  \n\t Are strings rotations? \
+  \n<6> <string> \
+  \n\t Count words \
+  \n\t Reverse words \
+  \n<7> <string>  \
+  \n\t String to integer");
 }
