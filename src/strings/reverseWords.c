@@ -1,17 +1,5 @@
 #include<stdio.h>
-#include<string.h>
-
-#define MAX_SIZE 20
-
-void reverseWords(char *str);
-
-int main()
-{
-  char str[MAX_SIZE];
-  scanf("%[^\n]s", str);
-  reverseWords(str);
-  return 0;
-}
+#include "strings.h"
 
 void reverseWords(char *str)
 {

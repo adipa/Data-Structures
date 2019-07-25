@@ -1,5 +1,5 @@
 /* Print duplicate characters from string */
-#include "printDuplicates2.h"
+#include "strings.h"
 
 #define ASCII_CHARACTER_LENGTH 256
 

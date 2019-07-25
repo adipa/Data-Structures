@@ -1,11 +1,11 @@
 //Check if two strings are rotations of each other
-
-#include "areRotations.h"
+#include<string.h>
+#include "strings.h"
 
 #define true 1
 #define false 0
 
-int areRotations(char* str1,char* str2)
+int areRotations(char *str1, char *str2)
 {
     int i = 0, j = 0;
     if(str1 == str2)

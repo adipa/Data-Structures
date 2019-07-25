@@ -1,16 +1,6 @@
-#include<stdio.h>
-int words(char* str);
+#include "strings.h"
 
-int main()
-{
-  char str[20];
-  printf("Enter String: ");
-  scanf("%[^\n]s",str);
-  printf("No. of words %d",words(str));
-  return 0;
-}
-
-int words(char* str)
+int countWords(char* str)
 {
   int i=0,c=1;
   while(str[i]!='\0'){

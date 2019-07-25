@@ -1,20 +1,12 @@
 #include<stdio.h>
-#include<string.h>
+#include "strings.h"
 
-#define MAX_SIZE 20
-
-void permuteString(char *str, int start, int end);
-void swap(char *i, char *j);
-
-int main()
+void swap(char *i, char *j)
 {
-  char str[MAX_SIZE];
-  int l;
-  scanf("%[^\n]s", str);
-  l = strlen(str) - 1;
-  printf("Permutations:\n");
-  permuteString(str, 0, l);
-  return 0;
+  char temp;
+  temp = *i;
+  *i = *j;
+  *j = temp;
 }
 
 void permuteString(char *str, int start, int end)
@@ -34,12 +26,4 @@ void permuteString(char *str, int start, int end)
       }
     }
   }
-}
-
-void swap(char *i, char *j)
-{
-  char temp;
-  temp = *i;
-  *i = *j;
-  *j = temp;
 }

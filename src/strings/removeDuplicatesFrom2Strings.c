@@ -1,5 +1,6 @@
 //remove characters from the first String which are present in the second String
-#include"removeDuplicatesFrom2Strings.h"
+#include"strings.h"
+
 char* removeDuplicatesFrom2Strings(char* str1,char* str2)
 {
   int i = 0,j = 0,k;

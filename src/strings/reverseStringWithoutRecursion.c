@@ -1,19 +1,7 @@
-#include<stdio.h>
 #include<string.h>
+#include "strings.h"
 
-#define MAX_SIZE 20
-
-char* reverseString(char *str);
-
-int main()
-{
-  char str[MAX_SIZE];
-  scanf("%[^\n]s", str);
-  printf("%s", reverseString(str));
-  return 0;
-}
-
-char* reverseString(char *str)
+char* reverseStringWORecursion(char *str)
 {
   int start = 0, end = strlen(str) - 1;
   while(start < end) {

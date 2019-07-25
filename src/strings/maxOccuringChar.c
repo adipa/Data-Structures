@@ -1,6 +1,4 @@
-#include<stdio.h>
-
-#include"maxOccuringChar.h"
+#include "strings.h"
 
 #define ASCII_LENGTH 256
 

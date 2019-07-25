@@ -1,18 +1,6 @@
-#include<stdio.h>
-char* removeGivenCharacter(char* str, char c);
+#include "string.h"
 
-int main()
-{
-  char str[20],c;
-  printf("Enter String: ");
-  fgets(str,20,stdin);
-  printf("Enter character to be removed: ");
-  scanf("%c", &c);
-  printf("After removal: %s",removeGivenCharacter(str,c));
-  return 0;
-}
-
-char* removeGivenCharacter(char* str, char c)
+char *removeGivenCharacter(char *str, char c)
 {
   int i = 0, k;
   while(str[i] != '\0'){

@@ -1,18 +1,19 @@
 #include<stdio.h>
 #include<string.h>
+#include "strings.h" 
 
-#define MAX_SIZE 20
-
-int longestPalindrome(char*);
-void printPalindrome(char*, int, int);
-
-int main()
+void printPalindrome(char *str, int start, int maxLength)
 {
-  char str[MAX_SIZE];
-  int len;
-  scanf("%[^\n]s", str);
-  printf("\nLength: %d\n",longestPalindrome(str));
-  return 0;
+  int i = start;
+  if(maxLength == 1)
+    printf("All unique characters. Each character is a palindromic substring.");
+  else
+  {
+    printf("Longest palindromic string: ");
+    while(i != start + maxLength) {
+      printf("%c", str[i++]);
+    }
+  }
 }
 
 int longestPalindrome(char* str)
@@ -48,18 +49,4 @@ int longestPalindrome(char* str)
   }
   printPalindrome(str, start, maxLength);
   return maxLength;
-}
-
-void printPalindrome(char *str, int start, int maxLength)
-{
-  int i = start;
-  if(maxLength == 1)
-    printf("All unique characters. Each character is a palindromic substring.");
-  else
-  {
-    printf("Longest palindromic string: ");
-    while(i != start + maxLength) {
-      printf("%c", str[i++]);
-    }
-  }
 }

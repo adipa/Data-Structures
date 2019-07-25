@@ -1,8 +1,5 @@
 /* Remove duplicate characters from given string */
-#include<stdio.h>
-#include<string.h>
-
-#include "removeDuplicates.h"
+#include "strings.h"
 
 #define ASCII_CHAR_LENGTH 256
 

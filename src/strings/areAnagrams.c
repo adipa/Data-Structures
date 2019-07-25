@@ -1,8 +1,6 @@
 //Check if two strings are anagrams of each other
 
-#include<stdio.h>
-
-#include "areAnagrams.h"
+#include "strings.h"
 
 #define ASCII_LENGTH 256
 #define true 1

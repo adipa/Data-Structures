@@ -1,5 +1,5 @@
 //find the first non-repeating character in a given String
-#include"firstNonRepeatingChar.h"
+#include "strings.h"
 
 char firstNonRepeatingChar(char *str)
 {

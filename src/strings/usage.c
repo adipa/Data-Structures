@@ -1,4 +1,4 @@
-#include "usage.h"
+#include "helperFunctions.h"
 
 void usage(char *filename)
 {

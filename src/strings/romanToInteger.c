@@ -1,6 +1,4 @@
-//Roman to integer
-//i=1,v=5,x=10,l=50,c=100,d=500,m=1000
-#include<stdio.h>
+#include"strings.h"
 
 int value(int v)
 {
@@ -15,7 +13,7 @@ int value(int v)
     return -1;
 }
 
-int convert(char str[])
+int convert(char *str)
 {
   int v = 0, i = 0;
   while(str[i] != '\0') {
@@ -26,13 +24,4 @@ int convert(char str[])
     i++;
   }
   return v;
-}
-
-int main()
-{
-  char str[20];
-  printf("Enter String: ");
-  scanf("%[^\n]s",str);
-  printf("Value: %d",convert(str));
-  return 0;
 }
