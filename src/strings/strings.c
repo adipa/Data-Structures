@@ -1,5 +1,5 @@
 //#include<string.h>
-#include "strings.h"
+#include "string/strings.h"
 
 #define ASCII_CHARACTER_LENGTH 256
 
@@ -39,10 +39,10 @@ int main(int argc, char *argv[])
       printf("%s is a palindrome\n", argv[2]);
     else
       printf("%s is not a palindrome\n", argv[2]);
-    
+
     printf("Length of longest palindrome: %d\n", longestPalindrome(argv[2]));
   }
-  
+
   else if(!strcmp(argv[1],"2"))
   {
     printf("\nReversed String: "); 
@@ -63,12 +63,12 @@ int main(int argc, char *argv[])
   else if(!strcmp(argv[1],"5"))
   {
     if(areAnagrams(argv[2], argv[3]))
-    {  
+    {
       printf("\nStrings are anagrams of each other.");
       if(areRotations(argv[2], argv[3]))
-	printf("\nStrings are rotations of each other.");
+    printf("\nStrings are rotations of each other.");
       else 
-	printf("\nStrings are not rotations of each other.");
+    printf("\nStrings are not rotations of each other.");
     }
     else 
       printf("\nStrings are not anagrams of each other.");
@@ -77,11 +77,11 @@ int main(int argc, char *argv[])
   else if(!strcmp(argv[1],"6"))
   {
     printf("\nNumber of words: %d\n", countWords(argv[2]));
-    
+
     reverseWords(argv[2]);
   }
   else //(!strcmp(argv[1],"7"))
     stringToInteger(argv[2]);
-  
+
   return 0;
 }
