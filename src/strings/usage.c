@@ -24,5 +24,5 @@ void usage(char *filename)
   \n\t Count words \
   \n\t Reverse words \
   \n<7> <string> \
-  \n\t String to integer");
+  \n\t String to integer\n");
 }

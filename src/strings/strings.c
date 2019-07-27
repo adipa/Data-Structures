@@ -6,6 +6,7 @@ int main(int argc, char *argv[])
   if(argc < 2)
   {
     usage(argv[0]);
+    return 0;
   }
   int len = strlen(argv[2]);
   if(!strcmp(argv[1],"1"))
