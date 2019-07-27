@@ -1,6 +1,6 @@
-#include "string.h"
+#include "string/strings.h"
 
-void reverseString(char *str, int start, int end)
+void revStr(char *str, int start, int end)
 {
   int len = strlen(str);
   if (len == 0 || len == 1 || start >= end)
@@ -10,5 +10,5 @@ void reverseString(char *str, int start, int end)
   *(str + end) ^= *(str + start);
   *(str + start) ^= *(str + end);
 
-  reverseString(str, start + 1, end - 1);
+  revStr(str, start + 1, end - 1);
 }

@@ -1,7 +1,6 @@
-#include<stdio.h>
-#include "strings.h"
+#include "string/strings.h"
 
-void reverseWords(char *str)
+void revWords(char *str)
 {
   int i = 0;
   //traverse till you reach a space or the end of the string
@@ -14,7 +13,7 @@ void reverseWords(char *str)
     return;
   }
     //recursively call the function by passing the address of the next word (first letter)
-  reverseWords(&str[i+1]);
+  revWords(&str[i+1]);
   /*replace space by null to print the word as a string and to avoid printing the previous words
    * for example,
    * a b c

@@ -1,15 +1,4 @@
-#include<stdio.h>
-#include<string.h>
-
-int stringToInteger(char *);
-int main()
-{
-  char str[20];
-  printf("Enter String: ");
-  scanf("%s", str);
-  printf("%d", stringToInteger(str));
-  return 0;
-}
+#include "string/strings.h"
 
 int stringToInteger(char *str)
 {

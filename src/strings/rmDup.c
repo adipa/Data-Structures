@@ -1,11 +1,9 @@
 /* Remove duplicate characters from given string */
-#include "strings.h"
+#include "string/strings.h"
 
-#define ASCII_CHAR_LENGTH 256
-
-char *removeDuplicates(char* str, char newStr[])
+char *rmDup(char* str, char newStr[])
 {
-  int ascii[ASCII_CHAR_LENGTH] = {0}, i, j;
+  int ascii[ASCII_LENGTH] = {0}, i, j;
   for (i = 0, j = 0; str[i] != '\0'; i++) {
     // check if this character already exists in our string.
     if (ascii[(int) str[i]] == 0 || str[i] == ' ')

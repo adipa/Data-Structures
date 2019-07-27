@@ -1,7 +1,7 @@
 //find the first non-repeating character in a given String
-#include "strings.h"
+#include "string/strings.h"
 
-char firstNonRepeatingChar(char *str)
+char firstUniqueChar(char *str)
 {
   int i = 0, j = 0;
   while(str[i] != '\0')

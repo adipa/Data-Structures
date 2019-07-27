@@ -1,15 +1,4 @@
-#include<stdio.h>
-#include<string.h>
-
-#include "areAnagrams.h"
-#include "areRotations.h"
-#include "firstNonRepeatingChar.h"
-#include "isPalindrome.h"
-#include "maxOccuringChar.h"
-#include "printDuplicates2.h"
-#include "removeDuplicates.h"
-#include "removeDuplicatesFrom2Strings.h"
-#include "usage.h"
+#include "strings.h"
 
 #define ASCII_CHARACTER_LENGTH 256
 
@@ -30,7 +19,6 @@ int main(int argc, char *argv[])
       printf("'%c' ", (char) maxcount[i]);
     }
   }
-
   else if(!strcmp(argv[1],"prdup"))
   {
     int duplicates[ASCII_CHARACTER_LENGTH] = {0}, size, i;
