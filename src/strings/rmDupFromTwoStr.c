@@ -1,7 +1,7 @@
 //remove characters from the first String which are present in the second String
 #include"string/strings.h"
 
-char* rmDupFromTwoStr(char* fstStr,char* sndStr)
+char* rmDupFromTwoStr(char* fstStr, char* sndStr)
 {
   int i = 0,j = 0,k;
   while(sndStr[i] != '\0'){
@@ -11,8 +11,8 @@ char* rmDupFromTwoStr(char* fstStr,char* sndStr)
       //start shifting from current match position
       k = j;
       while(fstStr[k] != '\0') {
-	fstStr[k] = fstStr[k+1];
-	k += 1;
+        fstStr[k] = fstStr[k+1];
+        k += 1;
       }
       //restore fstStr index to 0
       j = 0;
