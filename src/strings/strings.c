@@ -23,12 +23,13 @@ int main(int argc, char *argv[])
     }
 
     size = printDuplicates(argv[2], duplicates);
-    printf("\nDuplicate characters from string are: ");
+    if (size > 0)
+        printf("\nDuplicate characters from string are: ");
     for(i = 0; i <= size; i++) {
-       printf("'%d' ",(char) duplicates[i]);
+       printf("'%c' ",(char) duplicates[i]);
     }
 
-    printf("After removing Duplicates: %s\n", rmDup(argv[2], nonDuplicates));
+    printf("\nAfter removing Duplicates: %s\n", rmDup(argv[2], nonDuplicates));
 
     c = firstUniqueChar(argv[2]);
     if(c == '\0')
