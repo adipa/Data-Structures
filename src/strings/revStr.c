@@ -2,8 +2,7 @@
 
 void revStr(char *str, int start, int end)
 {
-  int len = strlen(str);
-  if (len == 0 || len == 1 || start >= end)
+  if (end <= 0 || start >= end)
     return;
 
   *(str + start) ^= *(str + end);
