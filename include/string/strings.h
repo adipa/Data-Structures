@@ -1,3 +1,6 @@
+#ifndef STRINGS_H
+#define STRINGS_H
+
 #include<stdio.h>
 #include<string.h>
 
@@ -25,3 +28,5 @@ char *revStrIterative       (char *str);
 char *rmChar                (char *str, char c);
 char *rmDup                 (char *str , char newStr[]);
 char *rmDupFromTwoStr       (char *fstStr, char *sndStr);
+
+#endif
