@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-  if(argc < 2)
+  if(argc < 3)
   {
     usage(argv[0]);
     return 0;
@@ -47,10 +47,9 @@ int main(int argc, char *argv[])
 
   else if(!strcmp(argv[1],"2"))
   {
-    printf("Reversed String: ");
     revStr(argv[2], 0, len - 1);
-
-    printf("\n%s", revStrIterative(argv[2]));
+    printf ("Reverse String: %s\n", argv[2]);
+    printf("Reverse String Iterative: %s\n", revStrIterative(argv[2]));
   }
 
   else if(!strcmp(argv[1],"3"))
@@ -68,9 +67,9 @@ int main(int argc, char *argv[])
     {
       printf("Strings are anagrams of each other.");
       if(areRotations(argv[2], argv[3]))
-	printf("\nStrings are rotations of each other.");
+        printf("\nStrings are rotations of each other.");
       else
-	printf("\nStrings are not rotations of each other.");
+        printf("\nStrings are not rotations of each other.");
       printf("After removing duplicates: %s\n", rmDupFromTwoStr(argv[2], argv[3]));
     }
     else
